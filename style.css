@@ -1,0 +1,99 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 10px; */
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+}
+
+.container .strip {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}
+
+.container .strip .box,
+.strip .strip-1 .box-1 {
+  padding: 2vw 0vw;
+  border-top: 1px solid #dedede2c;
+  border-bottom: 1px solid #dedede2c;
+  position: relative;
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  opacity: 1;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  overflow-y: auto;
+}
+
+.container .strip .box .elem,
+.strip .strip-1 .box-1 .elem-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  color: #fff;
+  padding: 0vw 3vw;
+  flex-shrink: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container .strip .box .elem .img-container,
+.strip .strip-1 .box-1 .elem-1 .img-container {
+  width: 6vw;
+  height: 6vw;
+  background-color: purple;
+  border-radius: 15%;
+  /* background-image: url('https://wallpapers.com/images/hd/cute-anime-profile-pictures-1uajidyr4s2a1l28.jpg');
+    background-size: cover; */
+}
+
+.container .strip .box .elem .img-container img,
+.strip .strip-1 .box-1 .elem-1 .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15%;
+}
+
+.container .strip .box .elem h1 sup,
+.strip .strip-1 .box-1 .elem-1 h1 sup {
+  font-size: 0.9vw;
+}
+
+.strip-1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 0%;
+  background-color: orangered;
+}
